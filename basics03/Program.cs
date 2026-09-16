@@ -4,6 +4,16 @@ namespace basics03
 {
     internal class Program
     {
+
+        #region Write a method called PrintWelcomeMessage that takes no parameters and prints "Welcome to the Library!".Call it from Main.
+        static void PrintWelcomeMessage()
+        {
+            Console.WriteLine("Welcome to the Library!");
+        }
+
+        #endregion
+
+
         static void Main(string[] args)
         {
             #region Create a one-dimensional array double[] prices with the values 25.5, 40.0, 33.75. Print the second price(index 1).
@@ -19,6 +29,13 @@ namespace basics03
             Console.WriteLine(shelfCopies[1, 0]);
 
             #endregion
+
+
+            #region call the PrintWelcomeMessage method from Main to display the welcome message.
+            PrintWelcomeMessage();
+            #endregion
+
+
 
 
 
