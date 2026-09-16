@@ -26,7 +26,8 @@ namespace basics03
         static void AddBonusPages(int pages)
         {
             pages += 50;
-            Console.WriteLine(pages);
+            
+          
         }
 
         #endregion
@@ -41,6 +42,14 @@ namespace basics03
 
         #endregion
 
+
+        #region Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref. Call it and print pages afterward. How is the result different from question 5 ?
+       
+        static void AddBonusPagesByRef(ref int pages)
+        {
+            pages += 50;
+        }
+        #endregion
 
 
         static void Main(string[] args)
@@ -71,7 +80,10 @@ namespace basics03
 
 
             #region call the AddBonusPages method from Main with the argument 400 to add bonus pages and print the result. What do you expect to see, and why?
-            AddBonusPages(400);
+            // print 400 because the method does not modify the original variable, it only modifies a copy of it.
+            int pages = 400;
+            AddBonusPages(pages);
+            Console.WriteLine(pages);
             #endregion
 
 
@@ -82,7 +94,14 @@ namespace basics03
             #endregion
 
 
-   
+            #region call the AddBonusPagesByRef method from Main with the argument 400 to add bonus pages and print the result. How is the result different from question 5?
+            // print 450 because the method modifies the original variable by using the ref keyword, which allows the method to access and modify the original variable.
+            int pages2 = 400;
+            AddBonusPagesByRef(ref pages2);
+            Console.WriteLine(pages2);
+            #endregion
+
+
 
 
 
