@@ -10,8 +10,16 @@ namespace basics03
         {
             Console.WriteLine("Welcome to the Library!");
         }
-
         #endregion
+
+
+        #region Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with "Clean Code".
+        static void PrintBookTitle(string title)
+        {
+            Console.WriteLine("Book title: " + title);
+        }
+        #endregion
+
 
 
         static void Main(string[] args)
@@ -33,6 +41,11 @@ namespace basics03
 
             #region call the PrintWelcomeMessage method from Main to display the welcome message.
             PrintWelcomeMessage();
+            #endregion
+
+
+            #region call the PrintBookTitle method from Main with the argument "Clean Code" to display the book title.
+            PrintBookTitle("Clean Code");
             #endregion
 
 
