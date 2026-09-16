@@ -83,6 +83,19 @@ namespace basics03
         #endregion
 
 
+        #region Write a method PrintAllTitles(params string[] titles) that prints each title on its own line.  Call it with three book titles.
+
+        static void PrintAllTitles(params string[] titles)
+        { 
+         foreach (string title in titles) { 
+                Console.WriteLine(title);
+            }
+        }
+           
+
+        #endregion
+
+
 
         static void Main(string[] args)
         {
@@ -166,6 +179,12 @@ namespace basics03
             PrintBookInfo(pages: 416, title: "The Pragmatic Programmer");
             #endregion
 
+
+            #region
+
+            PrintAllTitles("Clean Code", "The Pragmatic Programmer", "Design Patterns");
+
+            #endregion
 
 
 
