@@ -1,4 +1,6 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Drawing;
+using System.Reflection;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace basics03
 {
@@ -52,6 +54,36 @@ namespace basics03
         #endregion
 
 
+        #region Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a new array { 10.0, 12.5, 15.0 }.Call it with your prices array and print prices.Length afterward.
+        static void ReplaceArray(ref double[] Prices)
+        {
+            // Replaces the original array reference entirely with a new array
+            Prices = new double[] { 10.0, 12.5, 15.0 };
+        }
+        #endregion
+
+
+        #region Write a method bool TryGetPrice(string title, out double price) that returns true and sets price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it1and print the price if foundWrite a method PrintBookInfo(string title, int pages = 300) where pages is optional.Callit once with only a title, and once passing both a title and pages.
+        static bool TryGetPrice(string title, out double pricee)
+        {
+            if(title== "Clean Code")
+            {
+                pricee = 25.5;
+                return true;
+            }
+            pricee = 0.0;
+            return false;
+        }
+
+        static void PrintBookInfo(string title, int pages = 300)
+        {
+            Console.WriteLine($"Title: {title}, Pages: {pages}");
+        }
+
+        #endregion
+
+
+
         static void Main(string[] args)
         {
             #region Create a one-dimensional array double[] prices with the values 25.5, 40.0, 33.75. Print the second price(index 1).
@@ -100,6 +132,37 @@ namespace basics03
             AddBonusPagesByRef(ref pages2);
             Console.WriteLine(pages2);
             #endregion
+
+
+            #region call 
+            double[] Prices = { 1.99, 2.99, 3.99, 4.99 };
+
+            // Call the method using the ref keyword
+            ReplaceArray(ref Prices);
+
+            // Print the length of the new array
+            Console.WriteLine($"prices.Length: {Prices.Length}");
+            #endregion
+
+
+            #region 
+            if (TryGetPrice("Clean Code", out double price))
+            {
+                Console.WriteLine($"Price found: ${price}");
+            }
+            else
+            {
+                Console.WriteLine("Price not found.");
+            }
+
+            Console.WriteLine();
+
+            PrintBookInfo("The Pragmatic Programmer");               
+            PrintBookInfo("Design Patterns", 416);
+            #endregion
+
+
+
 
 
 
