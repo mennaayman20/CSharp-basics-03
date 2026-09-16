@@ -21,6 +21,17 @@ namespace basics03
         #endregion
 
 
+        #region Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable int pages = 400; and print pages afterward. What do you expect to see, and why?
+        
+        static void AddBonusPages(int pages)
+        {
+            pages += 50;
+            Console.WriteLine(pages);
+        }
+
+        #endregion
+
+
 
         static void Main(string[] args)
         {
@@ -46,6 +57,11 @@ namespace basics03
 
             #region call the PrintBookTitle method from Main with the argument "Clean Code" to display the book title.
             PrintBookTitle("Clean Code");
+            #endregion
+
+
+            #region call the AddBonusPages method from Main with the argument 400 to add bonus pages and print the result. What do you expect to see, and why?
+            AddBonusPages(400);
             #endregion
 
 
