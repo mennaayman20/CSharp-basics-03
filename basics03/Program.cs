@@ -32,6 +32,16 @@ namespace basics03
         #endregion
 
 
+        #region Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect tosee, and why? 
+
+        static void ApplyDiscount(double[] prices)
+        {
+            prices[0] -= 5;
+        }
+
+        #endregion
+
+
 
         static void Main(string[] args)
         {
@@ -63,6 +73,16 @@ namespace basics03
             #region call the AddBonusPages method from Main with the argument 400 to add bonus pages and print the result. What do you expect to see, and why?
             AddBonusPages(400);
             #endregion
+
+
+            #region call the ApplyDiscount method from Main with the argument double[] prices = { 25.5, 40.0 }; and print prices[0] afterward. What do you expect to see, and why?
+            double[] prices = { 25.5, 40.0 };
+            ApplyDiscount(prices);
+            Console.WriteLine(prices[0]);
+            #endregion
+
+
+   
 
 
 
